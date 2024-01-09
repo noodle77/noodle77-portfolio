@@ -1,0 +1,159 @@
+:root {
+    --gradient-in: rgb(33, 33, 33);
+    --gradient-out: rgb(0, 0, 0);
+    --headertext: whitesmoke;
+    --bodytext: rgb(77, 77, 77);
+    --accent: rgb(136, 0, 0);
+
+    --left-edge: 50px;
+    --content-margin: 8%;
+}
+
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: whitesmoke;
+}    
+
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}        
+
+body {
+    margin: 1px;
+    min-height: 100%;
+    min-width: 100%;
+    background-attachment: fixed;
+    background-image: radial-gradient(var(--gradient-in), var(--gradient-out))
+    
+}        
+
+header {
+    display: flex;
+    align-items: center;
+    margin-left: var(--left-edge);
+}
+
+h1 {
+    font-size: 50px;
+    color: var(--accent);
+}                    
+
+nav a {
+    margin: 25px;
+    font-size: 25px;
+}                    
+
+li {
+    display: inline-block;
+    color: var(--headertext);
+    
+}            
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}                
+
+section {
+    display: flex;
+    margin-left: var(--left-edge);
+    margin-bottom: 50px;
+    max-width: 80%;
+}            
+
+aside {
+    display: inline-flex;
+    min-width: 100px;
+    justify-content: flex-end;
+    border-right-width: 3px;
+    border-right-style: solid;
+    border-right-color: var(--accent);
+    padding-right: 25px;
+}                
+
+h2 {
+    font-size: 30px;
+    margin-top: 0px;
+    color: var(--bodytext);
+}                    
+
+article {
+    flex: 0 1 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+}                
+
+article p {
+    font-size: 18px;
+    margin-left: var(--content-margin);
+    margin-top: 0px
+}                
+
+article ul {
+    flex: 0 1 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0px;
+}                    
+
+article li {
+    margin-left: 2%;
+    margin-right: 2%;
+}                    
+
+div {
+    display: inline-flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}                    
+
+div a {
+    flex: 0 1 38%;
+    display: block;
+    margin-right: 4%;
+    margin-bottom: 4%;
+}                    
+
+div img {
+    max-width: 100%;
+}                    
+
+footer {
+    display: flex;
+    min-height: 100px;
+    align-items: flex-end;
+}
+
+footer p {
+    min-width: 100%;
+    color: var(--bodytext);
+    text-align: center;
+}
+
+
+.primary-link {
+    display: block;
+    flex: 0 1 80%;
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    
+    article ul {
+        flex-direction: column;
+        margin-left: var(--content-margin);
+    }
+
+    article li {
+        margin: 0px;
+
+    }
+}
