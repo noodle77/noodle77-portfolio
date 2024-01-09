@@ -146,6 +146,10 @@ footer p {
         flex-direction: column;
         margin-bottom: 50px;
     }
+
+    nav a {
+        margin: 15px;
+    }
     
     article ul {
         flex-direction: column;
